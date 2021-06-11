@@ -12,7 +12,7 @@ export default function Header() {
         if (window.innerWidth <= 320) {
             setMobileSize(true)
         }
-    })
+    },[])
 
 
     return (
