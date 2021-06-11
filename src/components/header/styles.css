@@ -100,6 +100,7 @@ header .bottomnav .active {
         flex-direction: column;
         height: 100vh;
         position: fixed;
+        z-index: 1;
         /* padding: 0 10% 0 10%; */
         /* margin-bottom: 1rem; */
     }
@@ -112,9 +113,6 @@ header .bottomnav .active {
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-    }
-    header .midnav .search-container button {
-        display: none;
     }
     header .midnav .search-container {
         width: 100%;
