@@ -25,7 +25,7 @@ export default function Header() {
                 <img src="/assets/logo.png" alt="" />
                 <button className="mobileHeader" onClick={() => setMobileSearch(mobileSearch ? false : true)} style={{ backgroundColor: 'transparent', border: '0' }} type="submit"><FiSearch size={30} color='var(--bg-color)' /></button>
                 <div className="search-container">
-                    <input style={{ display: mobileSearch ? '' : 'none' }} type="text" placeholder="Search.." name="search" />
+                    <input style={mobileSize ? { display: mobileSearch ? '' : 'none' } : {}} type="text" placeholder="Search.." name="search" />
                     <button type="submit">BUSCAR</button>
                 </div>
 
