@@ -1,0 +1,11 @@
+footer {
+    background-color: var(--bg-color);
+    margin: 0 10%;
+    padding: 80px;
+}
+
+@media (max-width: 320px) {
+    footer {
+        margin: 0 2%;
+    }
+}
