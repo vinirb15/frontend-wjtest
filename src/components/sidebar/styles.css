@@ -1,0 +1,18 @@
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #e2dedb;
+    width: 500px;
+    padding: 20px 30px 50px 30px;
+    margin: 0 2% 1% 0;
+}
+
+.sidebar-container ul li a {
+    color: var(--black);
+}
+
+@media (max-width: 320px){
+    .sidebar-container {
+        display: none;
+    }
+}
