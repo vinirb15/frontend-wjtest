@@ -3,7 +3,7 @@
 ### Tópicos 
 :arrow_right: [Pré-requisitos](#pré-requisitos)
 :arrow_right: [Configurando seu ambiente](#configurando-seu-ambiente)
-:arrow_right: [Configurando seu ambiente](#execute-o-projeto)
+:arrow_right: [Execute o projeto](#execute-o-projeto)
 ## Pré-requisitos
 :warning: [Node](https://nodejs.org/en/download/)
 ## Configurando seu ambiente
