@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FiSearch, FiMenu } from 'react-icons/fi';
 import './styles.css';
@@ -6,6 +6,15 @@ import './styles.css';
 export default function Header() {
     const [mobileSearch, setMobileSearch] = useState(false)
     const [mobileMenu, setMobileMenu] = useState(false)
+    const [mobileSize, setMobileSize] = useState(false)
+
+    useEffect(() => {
+        if (window.innerWidth <= 320) {
+            setMobileSize(true)
+        }
+    })
+
+
     return (
         <header>
             <div className="topnav">
@@ -13,15 +22,15 @@ export default function Header() {
             </div>
             <div className="midnav">
                 <button className="mobileHeader" onClick={() => setMobileMenu(mobileMenu ? false : true)} style={{ backgroundColor: 'transparent', border: '0' }} type="submit"><FiMenu size={30} color='var(--grey)' /></button>
-                <img src="/assets/logo.png" alt="" srcset="" />
+                <img src="/assets/logo.png" alt="" />
                 <button className="mobileHeader" onClick={() => setMobileSearch(mobileSearch ? false : true)} style={{ backgroundColor: 'transparent', border: '0' }} type="submit"><FiSearch size={30} color='var(--bg-color)' /></button>
-                <div class="search-container">
+                <div className="search-container">
                     <input style={{ display: mobileSearch ? '' : 'none' }} type="text" placeholder="Search.." name="search" />
                     <button type="submit">BUSCAR</button>
                 </div>
 
             </div>
-            <div className="bottomnav" style={{ width: mobileMenu ? '50%' : '0%', display: mobileMenu ? '' : 'none' }}>
+            <div className="bottomnav" style={mobileSize ? { width: mobileMenu ? '50%' : '0%', display: mobileMenu ? '' : 'none' } : {}}>
                 <ul>
                     <li>
                         <Link className="text-uppercase" to="#"><b>Página inicial</b></Link>
