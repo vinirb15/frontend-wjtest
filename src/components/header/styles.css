@@ -1,0 +1,128 @@
+header .topnav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0 10% 0 10%;
+}
+
+header .topnav p {
+    margin: 0;
+}
+
+header .topnav b {
+    text-decoration: underline;
+}
+
+header .midnav {
+    padding: 20px 10%;
+}
+
+header .midnav .mobileHeader {
+    display: none;
+}
+
+header .midnav .search-container {
+    float: right;
+}
+
+header .midnav input[type=text] {
+    padding: 6px;
+    font-size: 15px;
+    border: 1px solid var(--grey);
+}
+
+header .midnav .search-container button {
+    font-weight: bold;
+    float: right;
+    padding: 6px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    background: var(--bg-color);
+    border: 1px solid var(--grey);
+    color: var(--white);
+}
+
+header .bottomnav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 5rem;
+    padding: 0 10% 0 10%;
+    margin-bottom: 1rem;
+    background-color: var(--bg-color);
+}
+
+header .bottomnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header .bottomnav li {
+    float: left;
+}
+
+header .bottomnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+header .bottomnav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+header .bottomnav .active {
+    background-color: #04AA6D;
+}
+
+@media (max-width: 768px) {
+    header .bottomnav {
+        padding: 0;
+    }
+    header .bottomnav li a {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    header .bottomnav {
+        flex-direction: column;
+        height: 100vh;
+        position: fixed;
+        /* padding: 0 10% 0 10%; */
+        /* margin-bottom: 1rem; */
+    }
+    header .bottomnav li a {
+        font-size: 15px;
+    }
+    header .midnav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header .midnav .search-container button {
+        display: none;
+    }
+    header .midnav .search-container {
+        width: 100%;
+    }
+    header .midnav input[type=text] {
+        width: 100%;
+    }
+    header .midnav .mobileHeader {
+        display: flex;
+    }
+}
